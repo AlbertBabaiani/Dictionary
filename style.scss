@@ -1,0 +1,240 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    
+    box-sizing: border-box;
+    // font: inherit !important;
+
+    &:not(i){
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+}
+
+$primaryColor: #ada0ff;
+
+::selection{
+    background: $primaryColor;
+    color: #fff;
+}
+
+
+/* Width and Height of the scrollbar track */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+  
+/* Background color of the scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: $primaryColor;
+}
+
+/* Color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: #887bde;
+}
+
+/* Hover color of the scrollbar handle */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #887bde;
+}
+  
+
+
+
+// loading animation
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: $primaryColor;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: bounce 1s infinite;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes bounce {
+    0%, 80%, 100% {
+      transform: scale(0);
+    }
+  
+    40% {
+      transform: scale(1);
+    }
+  }
+  
+
+// loading animation end
+
+
+
+b{
+    color: $primaryColor;
+}
+
+
+body{
+    background: $primaryColor !important;
+    scroll-behavior: smooth;
+}
+
+.custom-container{
+    margin-top: 5vh;
+    margin-top: 5dvh;
+
+    margin-inline: auto;
+
+    width: 90%;
+    max-width: 46rem;
+
+    padding: 4rem;
+    background: #fff;
+
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 5px 0 #d4d6dc;
+
+    form{
+        display: flex;
+        align-items: end;
+        gap: 2rem;
+    }
+
+    input{
+        width: 100%;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid $primaryColor;
+
+        font-size: 1.3rem;
+
+        padding: 0.8rem 1rem;
+    }
+
+    .search{
+        cursor: pointer;
+
+        border: none;
+        outline: none;
+
+        height: 3.4rem;
+        padding-inline: 2rem;
+
+        font-weight: 600;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: #fff;
+        background: $primaryColor;
+
+        font-size: 1.1rem;
+
+        border-radius: 6px;
+
+        transition: background 0.3s;
+
+        &:hover,
+        &:focus{
+            background: #887bde;
+        }
+    }
+}
+
+
+.content{
+    & > *:not(i){
+        font-family: 'Poppins', sans-serif !important;
+    }
+
+    
+    
+    hr{
+        border-color: #d4d6dc;
+    }
+
+    .word{
+        display: flex;
+        justify-content: space-between;
+
+        h2{
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        button{
+            border: none;
+            background: none;
+            height: auto;
+            width: auto;
+
+            font-size: 1.3rem;
+            color: $primaryColor;
+            transition: color 0.3s;
+            outline: none;
+
+            &:hover,
+            &:focus{
+                color: #887bde;
+            }
+        }
+
+    }
+
+
+    .phonetic{
+        color: #c1c2c8;
+    }
+
+    .example{
+        padding: 1rem;
+        border-left: 8px solid $primaryColor;
+        color: #7a787f;
+        font-style: italic;
+    }
+    
+}
+
+
+@media (width <= 530px) {
+    .custom-container{
+        padding: 2.4rem;
+
+        form{
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        button{
+            width: 100%;
+        }
+    }
+}
+
+
+.accordion-button:not(.collapsed){
+    background: $primaryColor !important;
+    color: #fff !important;
+}
